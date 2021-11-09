@@ -1,6 +1,117 @@
-.broadcast {
-   font-family: serif;
+html {
+   font-size: 62.5%;
+   font-family: Lato;
+}
+$gutter: 1rem;
+.broadcast-wrapper {
    color: #fff;
-   background: rgb(5, 78, 97);
+   display: grid;
+   grid-gap: 2rem;
+   grid-template-columns: 1fr 1fr 1fr;
+
    
+}
+.broadcast { 
+   background: #015E7D;
+   padding: $gutter;
+   font-family: Lato;
+   border-radius: 0.6rem;
+   box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.288);
+   .broadcast__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img {
+         max-width: 100%;
+      }
+      .broadcast__client {  // this is an element, which depends on the block
+         background: #fff;
+         padding: 1.6rem;
+      }
+      .broadcast__actions {
+         display: flex;
+         button {
+            flex-flow: column;
+            border: 1px solid #fff;
+            min-width: 6rem;
+            margin-left: 0.5em;
+            i {
+               margin-bottom: 0.4rem;
+            }
+            span {
+               font-size: 1.4rem;
+               font-weight: normal;
+               
+            }
+         }
+      }
+   }
+   .broadcast__title {
+      display: flex;
+      h2:first-child {
+         margin-right: 0.4rem;
+      }
+   }
+   .broadcast__body {
+      padding-bottom: 1.6rem;
+      p {
+         margin: 0;
+      }
+      border-bottom: 1px solid #fff;
+   }
+   .broadcast__footer {
+      display: flex;
+      font-family: Lato;
+      justify-content: space-between;
+      align-items: center;
+      .broadcast__date-time {
+         display: flex;
+         p {
+            margin-right: 8px;
+         }
+         .broadcast--days {
+            color:rgb(22, 221, 221);
+         }
+      }
+   }
+}
+p {
+   font-size: 16px;
+}
+
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: .8em 1.4em;
+   color: #fff;
+   border-radius: 0.4em;
+   font-size: 1.6rem;
+   font-weight: bold;
+   background: transparent;
+   width: 100%;
+   border: none;
+   i {
+      padding-left: 1.2rem;
+   }
+}
+.btn-group {
+   display: flex;
+   button {
+      margin-right: 1.2rem;
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}
+
+.btn-square {
+   padding: 0.6em;
+   i {
+      padding-left: 0;
+   }
 }
